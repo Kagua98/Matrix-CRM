@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager | Matrix</title>
+    <meta name="description" content="Matrix Telematics CRM">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="image/favicon.png">
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap Dropify CSS -->
+    <link href="css/dropify.min.css" rel="stylesheet" type="text/css">
+
+    <!-- select2 CSS -->
+    <link href="css/select2.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Data Table CSS -->
+    <link href="css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Wrapper -->
+<div class="hk-wrapper" data-layout="vertical" data-layout-style="collapsed" data-menu="light" data-footer="simple"
+     data-hover="active">
+    <!-- Top Navbar -->
+    <nav class="hk-navbar navbar navbar-expand-xl navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Start Nav -->
+            <div class="nav-start-wrap">
+                <button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle d-xl-none"><span
+                        class="icon"><span class="feather-icon"><i data-feather="align-left"></i></span></span></button>
+
+                <!-- Search -->
+                <form class="dropdown navbar-search">
+                    <div class="dropdown-toggle no-caret" data-bs-toggle="dropdown" data-dropdown-animation=""
+                         data-bs-auto-close="outside">
+                        <a href="#" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover  d-xl-none"><span
+                                class="icon"><span class="feather-icon"><i data-feather="search"></i></span></span></a>
+                        <div class="input-group d-xl-flex d-none">
+							<span class="input-affix-wrapper input-search affix-border">
+								<input type="text" class="form-control  bg-transparent" data-navbar-search-close="false"
+                                       placeholder="Search..." aria-label="Search">
+								<span class="input-suffix"><span>/</span>
+									<span class="btn-input-clear"><i class="bi bi-x-circle-fill"></i></span>
+									<span class="spinner-border spinner-border-sm input-loader text-primary"
+                                          role="status">
+										<span class="sr-only">Loading...</span>
+									</span>
+								</span>
+							</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu p-0">
+                        <!-- Mobile Search -->
+                        <div class="dropdown-item d-xl-none bg-transparent">
+                            <div class="input-group mobile-search">
+								<span class="input-affix-wrapper input-search">
+									<input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+									<span class="input-suffix">
+										<span class="btn-input-clear"><i class="bi bi-x-circle-fill"></i></span>
+										<span class="spinner-border spinner-border-sm input-loader text-primary"
+                                              role="status">
+											<span class="sr-only">Loading...</span>
+										</span>
+									</span>
+								</span>
+                            </div>
+                        </div>
+                        <!--/ Mobile Search -->
+                        <div data-simplebar="" class="dropdown-body p-2">
+                            <h6 class="dropdown-header">Recent Search
+                            </h6>
+                            <div class="dropdown-item bg-transparent">
+                                <a href="#" class="badge badge-pill badge-soft-secondary">Grunt</a>
+                                <a href="#" class="badge badge-pill badge-soft-secondary">Node JS</a>
+                                <a href="#" class="badge badge-pill badge-soft-secondary">SCSS</a>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Help
+                            </h6>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media align-items-center">
+                                    <div class="media-head me-2">
+                                        <div class="avatar avatar-icon avatar-xs avatar-soft-light avatar-rounded">
+											<span class="initial-wrap">
+												<span class="svg-icon">
+													<svg xmlns="http://www.w3.org/2000/svg"
+                                                         class="icon icon-tabler icon-tabler-corner-down-right"
+                                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                         stroke="currentColor" fill="none" stroke-linecap="round"
+                                                         stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+														<path d="M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4"></path>
+													 </svg>
+												</span>
+											</span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        How to setup theme?
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media align-items-center">
+                                    <div class="media-head me-2">
+                                        <div class="avatar avatar-icon avatar-xs avatar-soft-light avatar-rounded">
+											<span class="initial-wrap">
+												<span class="svg-icon">
+													<svg xmlns="http://www.w3.org/2000/svg"
+                                                         class="icon icon-tabler icon-tabler-corner-down-right"
+                                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                         stroke="currentColor" fill="none" stroke-linecap="round"
+                                                         stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+														<path d="M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4"></path>
+													 </svg>
+												</span>
+											</span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        View detail documentation
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Users
+                            </h6>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media align-items-center">
+                                    <div class="media-head me-2">
+                                        <div class="avatar avatar-xs avatar-rounded">
+                                            <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        Sarah Jone
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media align-items-center">
+                                    <div class="media-head me-2">
+                                        <div class="avatar avatar-xs avatar-soft-primary avatar-rounded">
+                                            <span class="initial-wrap">J</span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        Joe Jackson
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media align-items-center">
+                                    <div class="media-head me-2">
+                                        <div class="avatar avatar-xs avatar-rounded">
+                                            <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        Maria Richard
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-footer d-xl-flex d-none"><a href="#"><u>Search all</u></a></div>
+                    </div>
+                </form>
+                <!-- /Search -->
+            </div>
+            <!-- /Start Nav -->
+
+            <!-- End Nav -->
+            <div class="nav-end-wrap">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover"><span
+                                class="icon"><span class=" position-relative"><span class="feather-icon"><i
+                                data-feather="inbox"></i></span><span
+                                class="badge badge-sm badge-soft-primary badge-sm badge-pill position-top-end-overflow-1"></span></span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdown-notifications">
+                            <a href="#"
+                               class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret"
+                               data-bs-toggle="dropdown" data-dropdown-animation="" role="button" aria-haspopup="true"
+                               aria-expanded="false"><span class="icon"><span class="position-relative"><span
+                                    class="feather-icon"><i data-feather="bell"></i></span><span
+                                    class="badge badge-success badge-indicator position-top-end-overflow-1"></span></span></span></a>
+                        </div>
+                    </li>
+                    <!-- Profile Pic -->
+                    <li class="nav-item">
+                        <div class="dropdown ps-2">
+                            <a class=" dropdown-toggle no-caret" href="#" role="button" data-bs-display="static"
+                               data-bs-toggle="dropdown" data-dropdown-animation="" data-bs-auto-close="outside"
+                               aria-expanded="false">
+                                <div class="avatar avatar-rounded avatar-xs">
+                                    <img src="image/profile.png" alt="user" class="avatar-img">
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div class="p-2">
+                                    <div class="media">
+                                        <div class="media-head me-2">
+                                            <div class="avatar avatar-primary avatar-sm avatar-rounded">
+                                                <span class="initial-wrap">MT</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="dropdown">
+                                                <a href="#" class="d-block dropdown-toggle link-dark fw-medium"
+                                                   data-bs-toggle="dropdown" data-dropdown-animation=""
+                                                   data-bs-auto-close="inside">Matrix</a>
+                                            </div>
+                                            <div class="fs-7">contact@hencework.com</div>
+                                            <a href="#" class="d-block fs-8 link-secondary"><u>Sign Out</u></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="profile.html">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Terms &amp; Conditions</a>
+                                <a class="dropdown-item" href="#">Help &amp; Support</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /End Nav -->
+        </div>
+    </nav>
+    <!-- /Top Navbar -->
+
+    <!-- Vertical Nav -->
+    <div class="hk-menu">
+        <!-- Brand -->
+        <div class="menu-header">
+				<span>
+					<a class="navbar-brand" href="index.html">
+						<img class="brand-img img-fluid" src="image/brand.svg" alt="brand">
+						<img class="brand-img d-inline-block" height="50" src="logo.png" alt="brand">
+					</a>
+					<button class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover navbar-toggle">
+						<span class="icon">
+							<span class="svg-icon fs-5">
+								<svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-arrow-bar-to-left" width="24" height="24"
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+									<line x1="10" y1="12" x2="20" y2="12"></line>
+									<line x1="10" y1="12" x2="14" y2="16"></line>
+									<line x1="10" y1="12" x2="14" y2="8"></line>
+									<line x1="4" y1="4" x2="4" y2="20"></line>
+								</svg>
+							</span>
+						</span>
+					</button>
+				</span>
+        </div>
+        <!-- /Brand -->
+
+        <!-- Main Menu -->
+        <div data-simplebar="" class="nicescroll-bar">
+            <div class="menu-content-wrap">
+                <div class="menu-group">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="icon icon-tabler icon-tabler-template" width="24" height="24"
+                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                 stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<rect x="4" y="4" width="16" height="4" rx="1"></rect>
+												<rect x="4" y="12" width="6" height="8" rx="1"></rect>
+												<line x1="14" y1="12" x2="20" y2="12"></line>
+												<line x1="14" y1="16" x2="20" y2="16"></line>
+												<line x1="14" y1="20" x2="20" y2="20"></line>
+											</svg>
+										</span>
+									</span>
+                                <span class="nav-link-text">Dashboard</span>
+                                <span class="badge badge-sm badge-soft-red ms-auto">Hot</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-gap"></div>
+                <div class="menu-group">
+                    <div class="nav-header">
+                        <span>Apps</span>
+                    </div>
+                    <ul class="navbar-nav flex-column">
+                        <!-- Calendar -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="icon icon-tabler icon-tabler-calendar-time" width="24"
+                                                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+												<circle cx="18" cy="18" r="4"></circle>
+												<path d="M15 3v4"></path>
+												<path d="M7 3v4"></path>
+												<path d="M3 11h16"></path>
+												<path d="M18 16.496v1.504l1 1"></path>
+											</svg>
+										</span>
+									</span>
+                                <span class="nav-link-text">Calendar</span>
+                            </a>
+                        </li>
+                        <!-- Clients/Customers -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
+                               data-bs-target="#dash_contact">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="icon icon-tabler icon-tabler-notebook" width="24" height="24"
+                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                 stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18"></path>
+												<line x1="13" y1="8" x2="15" y2="8"></line>
+												<line x1="13" y1="12" x2="15" y2="12"></line>
+											</svg>
+										</span>
+									</span>
+                                <span class="nav-link-text">Clients</span>
+                            </a>
+                            <ul id="dash_contact" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html"><span class="nav-link-text">Clients List</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact-cards.html"><span class="nav-link-text">Clients CardView</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- File Manager -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
+                               data-bs-target="#dash_file">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="icon icon-tabler icon-tabler-file-check" width="24" height="24"
+                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                 stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+												<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+												<path d="M9 15l2 2l4 -4"></path>
+											</svg>
+										</span>
+									</span>
+                                <span class="nav-link-text">File Manager</span>
+                            </a>
+                            <ul id="dash_file" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="file-manager-list.html"><span
+                                                    class="nav-link-text">List View</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="file-manager-grid.html"><span
+                                                    class="nav-link-text">Grid View</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Devices -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="devices.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="icon icon-tabler icon-tabler-photo" width="24" height="24"
+                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                 stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+												<line x1="15" y1="8" x2="15.01" y2="8"></line>
+												<rect x="4" y="4" width="16" height="16" rx="3"></rect>
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5"></path>
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2"></path>
+											</svg>
+										</span>
+									</span>
+                                <span class="nav-link-text">Devices</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-gap"></div>
+
+                <div class="callout card card-flush bg-blue-light-5 text-center mt-5 w-220p mx-auto">
+                    <div class="card-body">
+                        <h5 class="h5">Website</h5>
+                        <p class="p-sm card-text">View the company website</p>
+                        <a href="http://matrixtelematic.co.ke/" target="_blank"
+                           class="btn btn-primary btn-block">Matrix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Menu -->
+    </div>
+    <div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
+    <!-- /Vertical Nav -->
+
+    <!-- Main Content -->
+    <div class="hk-pg-wrapper pb-0">
+        <!-- Page Body -->
+        <div class="hk-pg-body py-0">
+            <div class="fmapp-wrap">
+                <nav class="fmapp-sidebar">
+                    <div data-simplebar class="nicescroll-bar">
+                        <div class="menu-content-wrap">
+                            <div class="btn btn-primary btn-rounded btn-block btn-file mb-4">
+                                Upload
+                                <input type="file" class="upload">
+                            </div>
+
+                            <div class="menu-group">
+                                <ul class="nav nav-light navbar-nav flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="javascript:void(0);">
+                                            <span class="nav-icon-wrap"><span class="feather-icon"><i data-feather="file"></i></span></span>
+                                            <span class="nav-link-text">All Files</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">
+                                            <span class="nav-icon-wrap"><span class="feather-icon"><i data-feather="star"></i></span></span>
+                                            <span class="nav-link-text">Starred</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">
+                                            <span class="nav-icon-wrap"><span class="feather-icon"><i data-feather="trash-2"></i></span></span>
+                                            <span class="nav-link-text">Trash</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="separator separator-light"></div>
+                            <div class="menu-group">
+                                <ul class="nav nav-light navbar-nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">
+                                            <span class="nav-icon-wrap"><span class="feather-icon"><i data-feather="image"></i></span></span>
+                                            <span class="nav-link-text">Images</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">
+                                            <span class="nav-icon-wrap"><span class="feather-icon"><i data-feather="file-text"></i></span></span>
+                                            <span class="nav-link-text">Documents</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sidebar Fixnav-->
+                    <div class="fmapp-fixednav">
+                        <div class="hk-toolbar">
+                            <ul class="nav nav-light">
+
+                                <li class="nav-item nav-link">
+                                    <a href="#" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Help"><span class="icon"><span class="feather-icon"><i data-feather="book"></i></span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/ Sidebar Fixnav-->
+                </nav>
+                <div class="fmapp-content">
+                    <div class="fmapp-detail-wrap">
+                        <header class="fm-header">
+                            <div class="d-flex align-items-center flex-grow-1">
+                                <a class="fmapp-title link-dark" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <h1>Files</h1>
+                                </a>
+                                <form class="mx-3 flex-grow-1 mw-400p" role="search">
+                                    <label>
+                                        <input type="text" class="form-control" placeholder="Search files">
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="fm-options-wrap">
+
+                                <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover fmapp-info-toggle"
+                                   href="#"><span class="icon"><span class="feather-icon"><i
+                                        data-feather="info"></i></span></span></a>
+                                <div class="v-separator d-xl-inline-block d-none"></div>
+
+                                <a class="btn btn-icon btn-flush-dark btn-rounded btn-file flush-soft-hover  d-md-inline-block d-none"
+                                   href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                   data-bs-original-title="Upload"><span class="icon"><span class="feather-icon"><i
+                                        data-feather="upload-cloud"></i></span>
+                                    <input type="file" class="upload"/>
+                                </span></a>
+                                <div class="v-separator d-lg-inline-block d-none"></div>
+                                <a class="btn btn-icon btn-flush-dark flush-soft-hover dropdown-toggle no-caret active ms-lg-0 d-sm-inline-block d-none"
+                                   href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i
+                                        data-feather="list"></i></span></span></a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="file-manager-list.html"><span
+                                            class="feather-icon dropdown-icon"><i data-feather="list"></i></span><span>List View</span></a>
+                                    <a class="dropdown-item active" href="file-manager-grid.html"><span
+                                            class="feather-icon dropdown-icon"><i data-feather="grid"></i></span><span>Grid View</span></a>
+                                </div>
+                                <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover hk-navbar-togglable d-lg-inline-block d-none"
+                                   href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                   data-bs-original-title="Collapse">
+										<span class="icon">
+											<span class="feather-icon"><i data-feather="chevron-up"></i></span>
+											<span class="feather-icon d-none"><i data-feather="chevron-down"></i></span>
+										</span>
+                                </a>
+                            </div>
+                            <div class="hk-sidebar-togglable"></div>
+                        </header>
+                        <div class="fm-body">
+                            <div data-simplebar class="nicescroll-bar">
+                                <div class="file-list-view">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="cloud_doc">
+                                            <div class="table-responsive">
+                                                <table id="datable_1" class="table nowrap w-100 mb-5">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="w-30p"><span class="form-check mb-0">
+																	<input type="checkbox" class="form-check-input check-select-all" id="customCheck1">
+																	<label class="form-check-label" for="customCheck1"></label>
+																</span></th>
+                                                        <th>Name</th>
+                                                        <th>Modified</th>
+                                                        <th>Size</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="file-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="media fmapp-info-trigger">
+                                                                <div class="media-head me-3">
+                                                                    <div class="avatar avatar-icon avatar-soft-blue avatar-sm">
+																				<span class="initial-wrap">
+																					<i class="ri-file-excel-2-fill"></i>
+																				</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="file-name">Website_content.xls</div>
+                                                                    <div>excel</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Today 11:02 AM</td>
+                                                        <td>2,637KB</td>
+                                                        <td class="text-right"><a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="download"></i></span><span>Download</span></a>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="share"></i></span><span>Share</span></a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="trash"></i></span><span>Delete</span></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="file-star"><span class="feather-icon"><i data-feather="star"></i></span></span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="media fmapp-info-trigger">
+                                                                <div class="media-head me-3">
+                                                                    <div class="avatar avatar-icon avatar-soft-danger avatar-sm">
+																				<span class="initial-wrap">
+																					<i class="ri-file-pdf-fill"></i>
+																				</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="file-name">jampack.pdf</div>
+                                                                    <div>pdf</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Today, 4:30 PM</td>
+                                                        <td>21.73 MB</td>
+                                                        <td class="text-right"><a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="download"></i></span><span>Download</span></a>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="share"></i></span><span>Share</span></a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="trash"></i></span><span>Delete</span></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="file-star"><span class="feather-icon"><i data-feather="star"></i></span></span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="media fmapp-info-trigger">
+                                                                <div class="media-head me-3">
+                                                                    <div class="avatar avatar-icon avatar-soft-blue avatar-sm">
+																				<span class="initial-wrap">
+																					<i class="ri-file-word-fill"></i>
+																				</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="file-name">proposal.doc</div>
+                                                                    <div>word document</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>02 Jan, 9:45 AM</td>
+                                                        <td>951 KB</td>
+                                                        <td class="text-right"><a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon"><span class="feather-icon"><i data-feather="more-horizontal"></i></span></span></a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="download"></i></span><span>Download</span></a>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="share"></i></span><span>Share</span></a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="trash"></i></span><span>Delete</span></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file-info">
+                            <div data-simplebar class="nicescroll-bar">
+                                <button type="button" class="info-close btn-close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <div class="file-name">File Name</div>
+                                <div class="media-head me-3">
+                                    <div class="avatar avatar-icon avatar-soft-blue avatar-sm">
+                                        <span class="initial-wrap">
+                                            <i class="ri-file-text-fill"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-content mt-5">
+                                    <div class="tab-pane fade show active" id="tab_info">
+                                        <div class="collapse-simple">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <a role="button" data-bs-toggle="collapse" href="#fl_info" aria-expanded="true">Specification</a>
+                                                </div>
+                                                <div id="fl_info" class="collapse show">
+                                                    <div class="card-body">
+                                                        <ul class="fm-info">
+                                                            <li>
+                                                                <span>Date Modified</span>
+                                                                <span>11, Oct 2022</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Size</span>
+                                                                <span>5.2 MB</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Created by</span>
+                                                                <span>Matrix Telematics</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <a role="button" data-bs-toggle="collapse" href="#settings" aria-expanded="true">Settings </a>
+                                                </div>
+                                                <div id="settings" class="collapse show">
+                                                    <div class="card-body">
+                                                        <ul class="fm-action">
+                                                            <li>
+                                                                <a href="javascript:void(0);">
+                                                                    <span class="text-danger">Delete File</span>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab_activity">
+                                        <div class="collapse-simple">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <a role="button" data-bs-toggle="collapse" href="#act_info1" aria-expanded="true">Yesterday</a>
+                                                </div>
+                                                <div id="act_info1" class="collapse show">
+                                                    <div class="card-body">
+                                                        <ul class="activity-list list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-head">
+                                                                        <div class="avatar avatar-sm avatar-primary avatar-rounded">
+                                                                            <span class="initial-wrap">H</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p><span class="text-dark">Hencework</span> is working on <a href="#" class="link-url"><u>https://assets.adobe.com/id/urn:aaid:sc:AP:5cebaf53-ca19-420a-aeeb-1517b04ab8c0?view=file</u></a></p>
+                                                                        <div class="last-activity-time">3:15 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-head">
+                                                                        <div class="media-head">
+                                                                            <div class="avatar avatar-sm avatar-soft-danger avatar-rounded">
+                                                                                <span class="initial-wrap">W</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p><span class="text-dark">Morgan Fregman</span> completed react conversion of <a href="#" class="link-default"><u>components</u></a></p>
+                                                                        <div class="last-activity-time">3:15 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <a role="button" data-bs-toggle="collapse" href="#act_info2" aria-expanded="true">23 April</a>
+                                                </div>
+                                                <div id="act_info2" class="collapse show">
+                                                    <div class="card-body">
+                                                        <ul class="activity-list list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-head">
+                                                                        <div class="avatar avatar-sm avatar-rounded">
+                                                                            <img src="dist/img/avatar15.jpg" alt="user" class="avatar-img">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p><span class="text-dark">Hencework</span> is working on <a href="#" class="link-url"><u>https://assets.adobe.com/id/urn:aaid:sc:AP:5cebaf53-ca19-420a-aeeb-1517b04ab8c0?view=file</u></a></p>
+                                                                        <div class="last-activity-time">3:15 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="media">
+                                                                    <div class="media-head">
+                                                                        <div class="avatar avatar-sm avatar-rounded">
+                                                                            <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p><span class="text-dark">Morgan Fregman</span> completed react conversion of <a href="#" class="link-default"><u>components</u></a></p>
+                                                                        <div class="last-activity-time">3:15 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Body -->
+    </div>
+    <!-- /Main Content -->
+</div>
+<!-- /Wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- FeatherIcons JS -->
+<script src="js/feather.min.js"></script>
+
+<!-- Fancy Dropdown JS -->
+<script src="js/dropdown-bootstrap-extended.js"></script>
+
+<!-- Simplebar JS -->
+<script src="js/simplebar.min.js"></script>
+
+<!-- Data Table JS -->
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap5.min.js"></script>
+<script src="js/dataTables.select.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="js/select2.full.min.js"></script>
+<script src="/js/select2-data.js"></script>
+
+<!-- Dropify JS -->
+<script src="js/dropify.min.js"></script>
+<script src="js/dropify-data.js"></script>
+
+<!-- Init JS -->
+<script src="js/init.js"></script>
+<script src="js/contact-data.js"></script>
+<script src="js/chips-init.js"></script>
+
+</body>
+</html>
